@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+
+.mongodb/economy.js
+
+.mongodb/warn.js
