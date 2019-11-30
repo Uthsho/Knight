@@ -11,6 +11,7 @@ module.exports = {
     
     if(message.guild.me.VoiceChannelID === message.member.voiceChannelID) return message.channel.send(`Sorry you aren\'t connected to the same voice channel as me.`);
     
+    ops.active.delete(message.guild.id);
     message.guild.me.voiceChannel.leave();
     
     message.channel.send(`Leaving channel.`);

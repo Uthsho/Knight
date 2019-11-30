@@ -16,7 +16,9 @@ dependencies:
   node-opus: 0.3.3
   opusscript: 0.0.7
   os: 0.1.1
+  parse-ms: 2.1.0
   quick.db: 6.3.2
+  relevant-urban: 2.0.0
   superagent: 5.1.1
   url: 0.11.0
   yt-search: 0.4.1
@@ -1226,6 +1228,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-s73XxOZ4zpt1edZYZzvhqFa6uvQc1vwUa0K0BdtIZgQMAJj9IbebH+JkgKZc9h+B05PKHLOTl4ajG1BmNrVZlw==
+  /parse-ms/2.1.0:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-kHt7kzLoS9VBZfUsiKjv43mr91ea+U05EyKkEtqp7vNbHxmaVuEqN7XxeEVnGrMtYOAxGrDElSi96K7EgO1zCA==
   /parseqs/0.0.5:
     dependencies:
       better-assert: 1.0.2
@@ -1362,6 +1370,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-TuAasHQNamyyJ2hb97IuBEif4qBHGjPHBS64sZwytpLEqtBQ1gPJTnOaQ6qmpET16cK14kkjbazl6+p0RRv0yw==
+  /relevant-urban/2.0.0:
+    dependencies:
+      snekfetch: 3.6.4
+    dev: false
+    resolution:
+      integrity: sha1-abvU9DpnSQjbkI4n8jCWyw8kuLk=
   /require_optional/1.0.1:
     dependencies:
       resolve-from: 2.0.0
@@ -1734,7 +1748,9 @@ specifiers:
   node-opus: ^0.3.2
   opusscript: ^0.0.7
   os: ^0.1.1
+  parse-ms: ^2.0.0
   quick.db: ^6.3.2
+  relevant-urban: ^2.0.0
   superagent: ^5.1.1
   url: ^0.11.0
   yt-search: ^0.4.1

@@ -11,8 +11,10 @@ setInterval(() => {
 }, 280000); // i think for good mod cmd we need to config jagrosh bot vortex its on java 
 // ima add commands now
 
+const active = new Map();
 const mongoose = require("mongoose");
 const Discord = require("discord.js");
+const db = require("quick.db")
 const config = require("./config.json");
 const client = new Discord.Client();
 const d = require("dotenv");
@@ -41,20 +43,17 @@ client.on("ready", () => {
 
 client.on("message", async message => {
   let ops = {
-    ownerID: OwnerID,
     active: active
   };
-  if (message.author.client) return;
-  var prefix = await db.get(`prefix_${message.guild.id}`)
-  if(!prefix) prefix = config.prefix;
+  if (message.author.bot) return;
+  var prefix = await db.fetch(`prefix_${message.guild.id}`)
+  if(!prefix) prefix = "k!";
   if (message.isMentioned(client.user)) {
-    const embed = new Discord.RichEmbed().setDescription(
-      `Hello ${message.author}, My prefix is ${prefix} in this guild. use ${prefix} help to see my commands.`
-    );
+    const embed = new Discord.RichEmbed()
+    .setDescription(`Hello ${message.author}, My prefix is ${prefix} in this guild. use ${prefix} help to see my commands.`);
     message.channel.send(embed);
   }
-  if (!message.guild) return;
-  if (!message.content.startsWith(prefix)) return;
+  if(!message.content.startsWith(prefix)) return;
   const args = message.content
     .slice(prefix.length)
     .trim()
