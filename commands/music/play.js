@@ -55,6 +55,7 @@ module.exports = {
 async function play(client, ops, data){
     
     data.dispatcher = await data.connection.playStream(ytdl(data.queue[0].url, {filter: 'audioonly'}));
+
     data.dispatcher.setVolume(100/100)
     
     client.channels.get(data.queue[0].announceChannel).send(`:musical_note: Now Playing: ${data.queue[0].songTitle} | Requested by ${data.queue[0].requester}`);
