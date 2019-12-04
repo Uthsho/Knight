@@ -1,5 +1,7 @@
 # Knight
-Official Knight git Repo!
+Official Knight git Repo! Knight offer's awesome features 
+## Add Bot to Your server?
+Please click this link to add [bot](https://discordapp.com/oauth2/authorize?client_id=545979318875062290&scope=bot&permissions=2146958847%60)
 
 ## Installation Guide
 There are no installation guide. Please do not steal code. Just take example of my codes.
