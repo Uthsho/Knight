@@ -8,8 +8,7 @@ app.get("/", (request, response) => {
 app.listen(process.env.PORT);
 setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000); // i think for good mod cmd we need to config jagrosh bot vortex its on java 
-// ima add commands now
+}, 280000); 
 
 const active = new Map();
 const mongoose = require("mongoose");
